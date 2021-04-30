@@ -293,6 +293,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/30/Ubuntu-chia/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/30/Ubuntu-chia/" itemprop="url">Ubuntu chia</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-30T08:44:00+00:00">
+                2021-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/chia/" itemprop="url" rel="index">
+                    <span itemprop="name">chia</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h1><p>机械盘（农田目标盘）前期处理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo fdisk -l	<span class="comment">#查看磁盘信息</span></span><br><span class="line">sudo mkfs.ext4 -m 0 -T largefile4 -L &lt;drivename&gt; /dev/sda	<span class="comment">#格式化机械盘</span></span><br><span class="line">mkdir /mnt/hdd	<span class="comment">#创建机械盘挂载目录</span></span><br><span class="line">mount /dev/sda /mnt/hdd	<span class="comment">#挂载机械盘</span></span><br></pre></td></tr></table></figure>
+<p>缓存盘raid0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mdadm -C /dev/md0 /dev/sd[a,b,c] -n 3 -l 0 -c 64</span><br><span class="line">sudo mdadm -C /dev/md0 /dev/nvme[1-2]n1 -n 2 -l 0 -c 64</span><br></pre></td></tr></table></figure>
+<p>固态盘（缓存盘）前期处理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkfs.xfs /dev/nvme0n1	<span class="comment">#格式化nvme盘</span></span><br><span class="line">or</span><br><span class="line">mkfs.xfs /dev/md0	<span class="comment">#格式化raid0后的磁盘</span></span><br><span class="line">mkdir /mnt/ssd	<span class="comment">#创建缓存盘挂载路径</span></span><br><span class="line">mount -t xfs -o discard /dev/md0 /mnt/ssd	<span class="comment">#挂载缓存盘</span></span><br></pre></td></tr></table></figure>
+<p>安装chia</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># Checkout the source and install</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/Chia-Network/chia-blockchain.git</span><br><span class="line"><span class="built_in">cd</span> chia-blockchain</span><br><span class="line"></span><br><span class="line">sh install.sh</span><br><span class="line"></span><br><span class="line">. ./activate</span><br></pre></td></tr></table></figure>
+<p>编辑权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/user/chialogs</span><br><span class="line">chmod 777 /mnt/hdd</span><br><span class="line">chmod 777 /mnt/ssd</span><br></pre></td></tr></table></figure>
+<p>安装<a target="_blank" rel="noopener" href="https://github.com/ericaltendorf/plotman">plotman</a></p>
+<ul>
+<li>确保在venv环境下输入</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --force-reinstall git+https://github.com/ericaltendorf/plotman@main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过plotman config generate生成默认配置文件，plotman config path查看配置文件路径并修改</li>
+<li>配置文件中需要注意的几个地方</li>
+</ul>
+<p><img src="/images/pasted-2.png" alt="upload successful"></p>
+<p><img src="/images/pasted-3.png" alt="upload successful"></p>
+<ul>
+<li>plotman interactive查看面板。只要面板一直在，plotman就会自动按照配置文件规划执行任务。</li>
+</ul>
+<p><img src="/images/pasted-4.png" alt="upload successful"></p>
+<ul>
+<li>为了能够一直挂着interactive，可以使用screen</li>
+</ul>
+<h1 id="farm"><a href="#farm" class="headerlink" title="farm"></a>farm</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chia init	<span class="comment">#安装完后首次执行</span></span><br><span class="line">chia keys add	<span class="comment">#添加助记词</span></span><br><span class="line">chia start farmer	<span class="comment">#启动full-node、farmer、harvester、wallet</span></span><br><span class="line">chia wallet show	<span class="comment">#查看钱包信息</span></span><br><span class="line">chia farm summary	<span class="comment">#查看farm信息</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/pasted-5.png" alt="upload successful"></p>
+<p>其余命令可在<a href="https://link.zhihu.com/?target=https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference">官方文档</a>查找</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/30/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -324,7 +497,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-30T08:37:28+00:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-30T08:37:00+00:00">
                 2021-04-30
               </time>
             
@@ -458,14 +631,32 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
             
 
           </nav>
