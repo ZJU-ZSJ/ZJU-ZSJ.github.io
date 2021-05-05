@@ -374,8 +374,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2021/05/05/dubbo%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2021/05/05/dubbo配置优先级/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/05/05/dubbo%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -535,8 +534,7 @@ dubbo服务超时时间有xml和注解两种方式进行实现配置超时功能
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2021/04/30/Ubuntu-chia/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2021/04/30/Ubuntu-chia/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/04/30/Ubuntu-chia/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -853,14 +851,6 @@ dubbo服务超时时间有xml和注解两种方式进行实现配置超时功能
 
   
 
-    
-      <script id="dsq-count-scr" src="https://zsjs-blog.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -876,12 +866,38 @@ dubbo服务超时时间有xml和注解两种方式进行实现配置超时功能
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'bhWP0PLyPmNydfsfuyl7XmRM-gzGzoHsz',
+        appKey: 'Ivg6ODQxMqeTfUklvqhAmoJF',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
