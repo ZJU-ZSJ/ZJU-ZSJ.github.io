@@ -46,4 +46,22 @@
         <tag>nvme</tag>
       </tags>
   </entry>
+  <entry>
+    <title>dubbo配置优先级</title>
+    <url>/2021/05/05/dubbo%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7/</url>
+    <content><![CDATA[<p>dubbo有多种配置方法，有时候会出现消费者和提供者配置同一字段的情况。这种情况下需要注意配置的优先级。以下为谷歌查询到的说法，在此记录一下。</p>
+<blockquote>
+<p>dubbo服务超时时间有xml和注解两种方式进行实现配置超时功能。在配置范围上分为全部超时配置、接口类上超时配置、以及接口方法上超时配置。同类型上的配置消费端优先提供着端，靠近原则方法配置优先于接口类全局配置优先级最低。所以dubbo的超时时间优先级为：消费者Method&gt;提供者method&gt;消费者Reference&gt;提供者Service&gt;消费者全局配置provider&gt;提供者全局配置consumer。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>dubbo</category>
+      </categories>
+      <tags>
+        <tag>dubbo</tag>
+        <tag>xml</tag>
+        <tag>java</tag>
+        <tag>spring</tag>
+      </tags>
+  </entry>
 </search>
