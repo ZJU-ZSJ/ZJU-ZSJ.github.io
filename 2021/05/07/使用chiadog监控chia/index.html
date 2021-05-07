@@ -77,13 +77,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZSJ&#39;s Blog">
-<meta property="og:url" content="http://blog.zjuzsj.cn/archives/2021/05/index.html">
+<meta name="description" content="无意中发现有人做了个chia监控的项目：chiadog，并且有docker版。 原理只是监控分析chia的日志，因此不会对p盘和farm造成任何影响，windows应该也可以用。建议用docker部署。 修改chia日志等级chia的日志输出默认是debug等级，信息较少，需要修改成INFO才能提供给chiadog分析。linux下的目录是~&#x2F;.chia&#x2F;mainnet&#x2F;config&#x2F;config">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用chiadog监控chia">
+<meta property="og:url" content="http://blog.zjuzsj.cn/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/index.html">
 <meta property="og:site_name" content="ZSJ&#39;s Blog">
+<meta property="og:description" content="无意中发现有人做了个chia监控的项目：chiadog，并且有docker版。 原理只是监控分析chia的日志，因此不会对p盘和farm造成任何影响，windows应该也可以用。建议用docker部署。 修改chia日志等级chia的日志输出默认是debug等级，信息较少，需要修改成INFO才能提供给chiadog分析。linux下的目录是~&#x2F;.chia&#x2F;mainnet&#x2F;config&#x2F;config">
 <meta property="og:locale">
+<meta property="og:image" content="http://blog.zjuzsj.cn/images/pasted-6.png">
+<meta property="og:image" content="http://blog.zjuzsj.cn/images/pasted-7.png">
+<meta property="article:published_time" content="2021-05-07T03:46:24.000Z">
+<meta property="article:modified_time" content="2021-05-07T04:04:02.770Z">
 <meta property="article:author" content="ZSJ">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.zjuzsj.cn/images/pasted-6.png">
 
 
 
@@ -113,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.zjuzsj.cn/archives/2021/05/"/>
+  <link rel="canonical" href="http://blog.zjuzsj.cn/2021/05/07/使用chiadog监控chia/"/>
 
 
 
 
 
-  <title>归档 | ZSJ's Blog</title>
+  <title>使用chiadog监控chia | ZSJ's Blog</title>
   
 
 
@@ -148,7 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,148 +293,166 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.zjuzsj.cn/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZSJ's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">使用chiadog监控chia</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-07T03:46:24+00:00">
+                2021-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2021">2021</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/" itemprop="url">
-              
-                <span itemprop="name">使用chiadog监控chia</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-05-07T03:46:24+00:00"
-              content="2021-05-07" >
-          05-07
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/05/hexo-next%E5%A2%9E%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" itemprop="url">
-              
-                <span itemprop="name">hexo next增加评论系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-05-05T08:30:00+00:00"
-              content="2021-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>无意中发现有人做了个chia监控的项目：<a target="_blank" rel="noopener" href="https://github.com/martomi/chiadog">chiadog</a>，并且有<a target="_blank" rel="noopener" href="https://hub.docker.com/r/artjacobson/chiadog-docker">docker版</a>。</p>
+<p>原理只是监控分析chia的日志，因此不会对p盘和farm造成任何影响，windows应该也可以用。建议用docker部署。</p>
+<h4 id="修改chia日志等级"><a href="#修改chia日志等级" class="headerlink" title="修改chia日志等级"></a>修改chia日志等级</h4><p>chia的日志输出默认是debug等级，信息较少，需要修改成INFO才能提供给chiadog分析。linux下的目录是<code>~/.chia/mainnet/config/config.yaml</code>,windows自行查找一下。将<code>log_level: DEBUG</code>改成<code>log_level: INFO</code>。然后重启chia服务，注意p盘进度会丢失。</p>
+<h4 id="创建chiadog配置文件"><a href="#创建chiadog配置文件" class="headerlink" title="创建chiadog配置文件"></a>创建chiadog配置文件</h4><p>作者提供了配置文件的样例，我们需要改成自己的才可以使用。需要注意的有以下几个地方。</p>
+<p><img src="/images/pasted-6.png" alt="upload successful"></p>
+<p>time_of_day设置了日报的发送时间。chiadog提供了多种消息提醒方式。这里我用telegram，使用smtp发邮件也不错。<code>~/.chia/mainnet/log/debug.log</code>是chia日志的路径，一般不用修改，创建docker时映射进去就可以。</p>
+<p>到此为止做好了启动docker的准备</p>
+<ul>
+<li>chiadog配置目录    ~/docker/config/chiadog/config.yaml</li>
+<li>chia日志目录    ~/.chia/mainnet/log/debug.log</li>
+</ul>
+<h4 id="启动docker"><a href="#启动docker" class="headerlink" title="启动docker"></a>启动docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name chiadog -v /root/docker/config/chiadog:/root/.chiadog -v /root/.chia/mainnet/<span class="built_in">log</span>:/root/.chia/mainnet/<span class="built_in">log</span>:ro -e config_dir=<span class="string">&quot;/root/.chiadog/config.yaml&quot;</span> -e TZ=<span class="string">&quot;Asia/Shanghai&quot;</span> -d artjacobson/chiadog-docker:latest</span><br></pre></td></tr></table></figure>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2021/05/05/dubbo%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7/" itemprop="url">
-              
-                <span itemprop="name">dubbo配置优先级</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-05-05T07:57:00+00:00"
-              content="2021-05-05" >
-          05-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p><code>:ro</code>代表只读，防止对宿主机日志文件造成影响。</p>
+<p>不出意外的话chiadog已经运行起来了，可以在telegram或者邮件中收到提示。</p>
+<p><img src="/images/pasted-7.png" alt="upload successful"></p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/05/hexo-next%E5%A2%9E%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" rel="next" title="hexo next增加评论系统">
+                <i class="fa fa-chevron-left"></i> hexo next增加评论系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -435,6 +460,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -455,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -516,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9chia%E6%97%A5%E5%BF%97%E7%AD%89%E7%BA%A7"><span class="nav-number">1.</span> <span class="nav-text">修改chia日志等级</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAchiadog%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">创建chiadog配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8docker"><span class="nav-number">3.</span> <span class="nav-text">启动docker</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -656,6 +713,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
