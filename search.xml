@@ -50,6 +50,44 @@
       </tags>
   </entry>
   <entry>
+    <title>chia-plot docker使用</title>
+    <url>/2021/05/08/chia-plot-docker%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>收费提供chia技术支持（linux、集群等）</p>
+</blockquote>
+<p><a href="https://github.com/ZJU-ZSJ/chia-plot">github仓库</a></p>
+<p><a href="https://hub.docker.com/r/zsj6166/chia-plot">dockerhub仓库</a></p>
+<p><a href="https://github.com/swar/Swar-Chia-Plot-Manager">Swar-Chia-Plot-Manager</a></p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>为了方便在linux上部署，根据官方docker做了个简易封装。首先需要对docker有一定理解，没有的话建议先去补课。</p>
+<ul>
+<li><p>假设已经对缓存盘以及目标盘做好格式化并且挂载完毕。缓存盘位置<code>/mnt/ssd</code>，目标盘位置<code>/mnt/hdd</code>。</p>
+</li>
+<li><p>编辑自己的plot-manager配置，<a href="https://github.com/swar/Swar-Chia-Plot-Manager/blob/main/config.yaml.default">默认配置</a>自取。主要编辑缓存盘，目标盘以及p盘配置。</p>
+</li>
+<li><p>准备好后启动docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run </span><br><span class="line">    --name chia-plot </span><br><span class="line">    -v /root/chia-plot-manager/config.yaml:/chia-blockchain/plot-manager/config.yaml <span class="comment">#plot-manager目录</span></span><br><span class="line">    -v /mnt/ssd:/share/tmp      <span class="comment">#缓存盘目录</span></span><br><span class="line">    -v /mnt/hdd:/share/dst      <span class="comment">#目标盘目录</span></span><br><span class="line">    -v /root/chia-plot-manager/chia-test/<span class="built_in">log</span>:/root/logs/plot-manager    <span class="comment">#plot-manager日志目录</span></span><br><span class="line">    -e TZ=<span class="string">&quot;Asia/Shanghai&quot;</span></span><br><span class="line">    -d zsj6166/chia-plot</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>不出意外的话docker就启动起来了。</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
+<li>添加助记词：<code>docker exec -it chia-plot venv/bin/chia keys add [助记词]</code></li>
+<li>启动full-node、farmer、harvester、wallet：<code>docker exec -it chia-plot venv/bin/chia start farmer</code></li>
+<li>查看钱包：<code>docker exec -it chia-plot venv/bin/chia wallet show</code></li>
+<li>查看farm信息：<code>docker exec -it chia-plot venv/bin/chia farm summary</code></li>
+<li>启动plot-manager管理p盘：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py start&quot;</code></li>
+<li>查看plot-manager面板：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py view&quot;</code></li>
+</ul>
+<p>建议还是只用来p盘，farm放在docker以外。</p>
+]]></content>
+      <categories>
+        <category>chia</category>
+      </categories>
+      <tags>
+        <tag>chia</tag>
+        <tag>linux</tag>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>dubbo配置优先级</title>
     <url>/2021/05/05/dubbo%E9%85%8D%E7%BD%AE%E4%BC%98%E5%85%88%E7%BA%A7/</url>
     <content><![CDATA[<p>dubbo有多种配置方法，有时候会出现消费者和提供者配置同一字段的情况。这种情况下需要注意配置的优先级。以下为谷歌查询到的说法，在此记录一下。</p>
@@ -122,44 +160,6 @@
         <tag>linux</tag>
         <tag>docker</tag>
         <tag>telegram</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>chia-plot docker使用</title>
-    <url>/2021/05/08/chia-plot-docker%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>收费提供chia技术支持（linux、集群等）</p>
-</blockquote>
-<p><a href="https://github.com/ZJU-ZSJ/chia-plot">github仓库</a></p>
-<p><a href="https://hub.docker.com/r/zsj6166/chia-plot">dockerhub仓库</a></p>
-<p><a href="https://github.com/swar/Swar-Chia-Plot-Manager">Swar-Chia-Plot-Manager</a></p>
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>为了方便在linux上部署，根据官方docker做了个简易封装。首先需要对docker有一定理解，没有的话建议先去补课。</p>
-<ul>
-<li><p>假设已经对缓存盘以及目标盘做好格式化并且挂载完毕。缓存盘位置<code>/mnt/ssd</code>，目标盘位置<code>/mnt/hdd</code>。</p>
-</li>
-<li><p>编辑自己的plot-manager配置，<a href="https://github.com/swar/Swar-Chia-Plot-Manager/blob/main/config.yaml.default">默认配置</a>自取。主要编辑缓存盘，目标盘以及p盘配置。</p>
-</li>
-<li><p>准备好后启动docker</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run </span><br><span class="line">    --name chia-plot </span><br><span class="line">    -v /root/chia-plot-manager/config.yaml:/chia-blockchain/plot-manager/config.yaml <span class="comment">#plot-manager目录</span></span><br><span class="line">    -v /mnt/ssd:/share/tmp      <span class="comment">#缓存盘目录</span></span><br><span class="line">    -v /mnt/hdd:/share/dst      <span class="comment">#目标盘目录</span></span><br><span class="line">    -v /root/chia-plot-manager/chia-test/<span class="built_in">log</span>:/root/logs/plot-manager    <span class="comment">#plot-manager日志目录</span></span><br><span class="line">    -e TZ=<span class="string">&quot;Asia/Shanghai&quot;</span></span><br><span class="line">    -d zsj6166/chia-plot</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>不出意外的话docker就启动起来了。</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
-<li>添加助记词：<code>docker exec -it chia-plot venv/bin/chia keys add [助记词]</code></li>
-<li>启动full-node、farmer、harvester、wallet：<code>docker exec -it chia-plot venv/bin/chia start farmer</code></li>
-<li>查看钱包：<code>docker exec -it chia-plot venv/bin/chia wallet show</code></li>
-<li>查看farm信息：<code>docker exec -it chia-plot venv/bin/chia farm summary</code></li>
-<li>启动plot-manager管理p盘：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py start&quot;</code></li>
-<li>查看plot-manager面板：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py view&quot;</code></li>
-</ul>
-<p>建议还是只用来p盘，farm放在docker以外。</p>
-]]></content>
-      <categories>
-        <category>chia</category>
-      </categories>
-      <tags>
-        <tag>chia</tag>
-        <tag>linux</tag>
-        <tag>docker</tag>
       </tags>
   </entry>
 </search>
