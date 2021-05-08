@@ -3,7 +3,10 @@
   <entry>
     <title>Ubuntu chia</title>
     <url>/2021/04/30/Ubuntu-chia/</url>
-    <content><![CDATA[<h1 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h1><p>机械盘（农田目标盘）前期处理</p>
+    <content><![CDATA[<blockquote>
+<p>收费提供chia技术支持（linux、集群等）</p>
+</blockquote>
+<h1 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h1><p>机械盘（农田目标盘）前期处理</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo fdisk -l	<span class="comment">#查看磁盘信息</span></span><br><span class="line">sudo mkfs.ext4 -m 0 -T largefile4 -L &lt;drivename&gt; /dev/sda	<span class="comment">#格式化机械盘</span></span><br><span class="line">mkdir /mnt/hdd	<span class="comment">#创建机械盘挂载目录</span></span><br><span class="line">mount /dev/sda /mnt/hdd	<span class="comment">#挂载机械盘</span></span><br></pre></td></tr></table></figure>
 <p>缓存盘raid0</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mdadm -C /dev/md0 /dev/sd[a,b,c] -n 3 -l 0 -c 64</span><br><span class="line">sudo mdadm -C /dev/md0 /dev/nvme[1-2]n1 -n 2 -l 0 -c 64</span><br></pre></td></tr></table></figure>
@@ -91,7 +94,10 @@
   <entry>
     <title>使用chiadog监控chia</title>
     <url>/2021/05/07/%E4%BD%BF%E7%94%A8chiadog%E7%9B%91%E6%8E%A7chia/</url>
-    <content><![CDATA[<p>无意中发现有人做了个chia监控的项目：<a href="https://github.com/martomi/chiadog">chiadog</a>，并且有<a href="https://hub.docker.com/r/artjacobson/chiadog-docker">docker版</a>。</p>
+    <content><![CDATA[<blockquote>
+<p>收费提供chia技术支持（linux、集群等）</p>
+</blockquote>
+<p>无意中发现有人做了个chia监控的项目：<a href="https://github.com/martomi/chiadog">chiadog</a>，并且有<a href="https://hub.docker.com/r/artjacobson/chiadog-docker">docker版</a>。</p>
 <p>原理只是监控分析chia的日志，因此不会对p盘和farm造成任何影响，windows应该也可以用。建议用docker部署。</p>
 <h4 id="修改chia日志等级"><a href="#修改chia日志等级" class="headerlink" title="修改chia日志等级"></a>修改chia日志等级</h4><p>chia的日志输出默认是debug等级，信息较少，需要修改成INFO才能提供给chiadog分析。linux下的目录是<code>~/.chia/mainnet/config/config.yaml</code>,windows自行查找一下。将<code>log_level: DEBUG</code>改成<code>log_level: INFO</code>。然后重启chia服务，注意p盘进度会丢失。</p>
 <h4 id="创建chiadog配置文件"><a href="#创建chiadog配置文件" class="headerlink" title="创建chiadog配置文件"></a>创建chiadog配置文件</h4><p>作者提供了配置文件的样例，我们需要改成自己的才可以使用。需要注意的有以下几个地方。</p>
@@ -121,7 +127,10 @@
   <entry>
     <title>chia-plot docker使用</title>
     <url>/2021/05/08/chia-plot-docker%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><a href="https://github.com/ZJU-ZSJ/chia-plot">github仓库</a></p>
+    <content><![CDATA[<blockquote>
+<p>收费提供chia技术支持（linux、集群等）</p>
+</blockquote>
+<p><a href="https://github.com/ZJU-ZSJ/chia-plot">github仓库</a></p>
 <p><a href="https://hub.docker.com/r/zsj6166/chia-plot">dockerhub仓库</a></p>
 <p><a href="https://github.com/swar/Swar-Chia-Plot-Manager">Swar-Chia-Plot-Manager</a></p>
 <h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>为了方便在linux上部署，根据官方docker做了个简易封装。首先需要对docker有一定理解，没有的话建议先去补课。</p>
@@ -142,7 +151,7 @@
 <li>启动plot-manager管理p盘：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py start&quot;</code></li>
 <li>查看plot-manager面板：<code>docker exec -it chia-plot bash -c &quot;cd plot-manager &amp;&amp; ../venv/bin/python manager.py view&quot;</code></li>
 </ul>
-<p>建议还是只用来p盘，farm放在docker以外</p>
+<p>建议还是只用来p盘，farm放在docker以外。</p>
 ]]></content>
       <categories>
         <category>chia</category>
