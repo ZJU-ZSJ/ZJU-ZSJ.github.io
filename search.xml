@@ -128,7 +128,7 @@
 <ul>
 <li><p>假设已经对缓存盘以及目标盘做好格式化并且挂载完毕。缓存盘位置<code>/mnt/ssd</code>，目标盘位置<code>/mnt/hdd</code>。</p>
 </li>
-<li><p>编辑自己的plot-manager配置，<a href="https://github.com/ZJU-ZSJ/chia-plot/blob/master/config.yaml">默认配置</a>自取。主要编辑缓存盘，目标盘以及p盘配置。</p>
+<li><p>编辑自己的plot-manager配置，<a href="https://github.com/swar/Swar-Chia-Plot-Manager/blob/main/config.yaml.default">默认配置</a>自取。主要编辑缓存盘，目标盘以及p盘配置。</p>
 </li>
 <li><p>准备好后启动docker</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run </span><br><span class="line">    --name chia-plot </span><br><span class="line">    -v /root/chia-plot-manager/config.yaml:/chia-blockchain/plot-manager/config.yaml <span class="comment">#plot-manager目录</span></span><br><span class="line">    -v /mnt/ssd:/share/tmp      <span class="comment">#缓存盘目录</span></span><br><span class="line">    -v /mnt/hdd:/share/dst      <span class="comment">#目标盘目录</span></span><br><span class="line">    -v /root/chia-plot-manager/chia-test/<span class="built_in">log</span>:/root/logs/plot-manager    <span class="comment">#plot-manager日志目录</span></span><br><span class="line">    -e TZ=<span class="string">&quot;Asia/Shanghai&quot;</span></span><br><span class="line">    -d zsj6166/chia-plot</span><br></pre></td></tr></table></figure></li>
