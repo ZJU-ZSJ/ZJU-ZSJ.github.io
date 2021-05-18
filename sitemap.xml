@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zjuzsj.cn/2021/05/18/linux%E4%B8%8Bchia%E8%A7%A3%E5%86%B3%E5%90%8C%E6%AD%A5%E8%8A%82%E7%82%B9%E9%97%AE%E9%A2%98%EF%BC%88%E4%B9%9F%E4%B8%8D%E4%B8%80%E5%AE%9A%EF%BC%89/</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zjuzsj.cn/2021/05/13/Ubuntu-CPU%E7%9D%BF%E9%A2%91-%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE/</loc>
     
     <lastmod>2021-05-13</lastmod>
@@ -74,7 +81,7 @@
 
   <url>
     <loc>http://blog.zjuzsj.cn/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,105 +89,119 @@
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/ubuntu/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/chia/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/linux/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/nvme/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/docker/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/dubbo/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/xml/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/java/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/spring/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/hexo/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/next/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/leanCloud/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/valine/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/blog/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/telegram/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zjuzsj.cn/tags/python/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zjuzsj.cn/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -189,28 +210,28 @@
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/chia/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/dubbo/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/hexo/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/linux/</loc>
-    <lastmod>2021-05-13</lastmod>
+    <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
