@@ -7,7 +7,7 @@
 <p>收费提供chia技术支持（linux、集群等）</p>
 </blockquote>
 <h1 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h1><p>机械盘（农田目标盘）前期处理</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo fdisk -l	<span class="comment">#查看磁盘信息</span></span><br><span class="line">sudo mkfs.ext4 -m 0 -T largefile4 -L &lt;drivename&gt; /dev/sda	<span class="comment">#格式化机械盘</span></span><br><span class="line">mkdir /mnt/hdd	<span class="comment">#创建机械盘挂载目录</span></span><br><span class="line">mount /dev/sda /mnt/hdd	<span class="comment">#挂载机械盘</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo fdisk -l	<span class="comment">#查看磁盘信息</span></span><br><span class="line">sudo mkfs.ext4 -m 0 -T largefile4 -L &lt;drivename&gt; /dev/sda	<span class="comment">#格式化机械盘(ext4)</span></span><br><span class="line">sudo mkfs.exfat -n LABEL /dev/sda	<span class="comment">#格式化机械盘(exfat)</span></span><br><span class="line">mkdir /mnt/hdd	<span class="comment">#创建机械盘挂载目录</span></span><br><span class="line">mount /dev/sda /mnt/hdd	<span class="comment">#挂载机械盘</span></span><br></pre></td></tr></table></figure>
 <p>缓存盘raid0</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mdadm -C /dev/md0 /dev/sd[a,b,c] -n 3 -l 0 -c 64</span><br><span class="line">sudo mdadm -C /dev/md0 /dev/nvme[1-2]n1 -n 2 -l 0 -c 64</span><br></pre></td></tr></table></figure>
 <p>固态盘（缓存盘）前期处理</p>
