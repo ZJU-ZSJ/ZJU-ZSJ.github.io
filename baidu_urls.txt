@@ -1,3 +1,4 @@
+http://blog.zjuzsj.cn/2021/07/06/OpenWRT%E6%8C%82%E8%BD%BD%E7%BE%A4%E6%99%96nfs/
 http://blog.zjuzsj.cn/2021/07/06/springboot%E5%90%8E%E7%AB%AF%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/
 http://blog.zjuzsj.cn/2021/05/18/linux%E4%B8%8Bchia%E8%A7%A3%E5%86%B3%E5%90%8C%E6%AD%A5%E8%8A%82%E7%82%B9%E9%97%AE%E9%A2%98%EF%BC%88%E4%B9%9F%E4%B8%8D%E4%B8%80%E5%AE%9A%EF%BC%89/
 http://blog.zjuzsj.cn/2021/05/13/Ubuntu-CPU%E7%9D%BF%E9%A2%91-%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE/
