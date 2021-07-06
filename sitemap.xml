@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zjuzsj.cn/2021/07/06/springboot%E5%90%8E%E7%AB%AF%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zjuzsj.cn/2021/04/30/Ubuntu-chia/</loc>
     
     <lastmod>2021-05-26</lastmod>
@@ -81,7 +88,7 @@
 
   <url>
     <loc>http://blog.zjuzsj.cn/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -89,119 +96,119 @@
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/ubuntu/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/chia/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/linux/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/nvme/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/docker/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/dubbo/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/xml/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/java/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/spring/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/hexo/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/next/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/leanCloud/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/valine/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/blog/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/telegram/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/python/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/tags/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -210,28 +217,28 @@
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/chia/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/dubbo/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/hexo/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://blog.zjuzsj.cn/categories/linux/</loc>
-    <lastmod>2021-05-26</lastmod>
+    <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
