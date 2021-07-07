@@ -212,6 +212,13 @@
     <url>/2021/07/06/springboot%E5%90%8E%E7%AB%AF%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<p>需求是通过springboot后端将hdfs上的日志文件下载下来。hdfs中的文件内容通过cat获取，较为简单。主要记录一下如何将文件下载下来。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RequestMapping(value = &quot;/download&quot;, method = RequestMethod.GET)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downloadLog</span><span class="params">(HttpServletResponse response)</span> </span>&#123;</span><br><span class="line">        response.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html&quot;</span>);</span><br><span class="line">        response.setHeader(<span class="string">&quot;Content-Disposition&quot;</span>, <span class="string">&quot;attachment;fileName=a.txt&quot;</span>);</span><br><span class="line">        String content = [日志内容];</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            OutputStream os = response.getOutputStream();</span><br><span class="line">            os.write(content.getBytes(StandardCharsets.UTF_8));</span><br><span class="line">            os.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException ignored) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>springboot</tag>
+      </tags>
   </entry>
   <entry>
     <title>OpenWRT挂载群晖nfs</title>
@@ -220,5 +227,13 @@
 <p>需要<code>nfs-utils</code>和<code>nfs-utils-libs</code>两个包。</p>
 <p>群晖nfs打开4.0支持，OpenWRT开机脚本新增一行。（假设群晖ip是192.168.31.100）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mount.nfs -w 192.168.31.100:/volume3/OpenWRT /mnt/openwrt/ -o nolock</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>openwrt</tag>
+        <tag>esxi</tag>
+      </tags>
   </entry>
 </search>
