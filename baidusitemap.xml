@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://blog.zjuzsj.cn/2021/10/08/OpenWRT%E4%BD%BF%E7%94%A8virtualhere%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Busb/</loc>
+    <lastmod>2021-10-08</lastmod>
+  </url>
+  <url>
+    <loc>http://blog.zjuzsj.cn/2021/10/08/%E7%BE%A4%E6%99%96%E5%8D%87%E7%BA%A76-2-3%E5%90%8E%E6%A0%B8%E6%98%BE%E5%A4%B1%E6%95%88/</loc>
+    <lastmod>2021-10-08</lastmod>
+  </url>
+  <url>
     <loc>http://blog.zjuzsj.cn/2021/07/06/OpenWRT%E6%8C%82%E8%BD%BD%E7%BE%A4%E6%99%96nfs/</loc>
     <lastmod>2021-07-07</lastmod>
   </url>
