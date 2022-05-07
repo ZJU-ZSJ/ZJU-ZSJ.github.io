@@ -1,3 +1,4 @@
+http://blog.zjuzsj.cn/2022/05/07/%E7%BE%A4%E6%99%96%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85moments/
 http://blog.zjuzsj.cn/2021/10/08/OpenWRT%E4%BD%BF%E7%94%A8virtualhere%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Busb/
 http://blog.zjuzsj.cn/2021/10/08/%E7%BE%A4%E6%99%96%E5%8D%87%E7%BA%A76-2-3%E5%90%8E%E6%A0%B8%E6%98%BE%E5%A4%B1%E6%95%88/
 http://blog.zjuzsj.cn/2021/07/06/OpenWRT%E6%8C%82%E8%BD%BD%E7%BE%A4%E6%99%96nfs/

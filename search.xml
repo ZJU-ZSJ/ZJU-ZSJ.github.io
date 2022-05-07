@@ -268,4 +268,22 @@
         <tag>群晖</tag>
       </tags>
   </entry>
+  <entry>
+    <title>群晖无法安装moments</title>
+    <url>/2022/05/07/%E7%BE%A4%E6%99%96%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85moments/</url>
+    <content><![CDATA[<p>通过查看系统日志<code>/var/log/messages</code>，得知错误与pgsql数据库有关，需要重建。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">网络方法（失效）：</span><br><span class="line">curl -s https:&#x2F;&#x2F;ftp.synology.com&#x2F;support_web&#x2F;Tools&#x2F;script&#x2F;pgsql_analyzer.sh | sh -s -- -r</span><br><span class="line"></span><br><span class="line">最终方法：</span><br><span class="line">wget https:&#x2F;&#x2F;www.moewah.com&#x2F;source&#x2F;pgsql_analyzer.sh --no-check-certificate</span><br><span class="line">chmod a+x pgsql_analyzer.sh </span><br><span class="line">.&#x2F;pgsql_analyzer.sh -r</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<p>重新安装后发现moments无法开启共享照片库，查看日志：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">PL&#x2F;pgSQL function create_user_schema_func() line 40 at EXECUTE statement</span><br><span class="line">SQL statement &quot;INSERT INTO user_info (name, config, enable) VALUES (&#39;&#x2F;volume3&#x2F;photo&#39;, &#39;&#123;&quot;version&quot;: 57&#125;&#39;, true) RETURNING id&quot;</span><br><span class="line">PL&#x2F;pgSQL function create_delete_team_user_trigger_func() line 9 at EXECUTE statement</span><br><span class="line">2022-05-08T01:52:36+08:00 DS918 synoscgi_SYNO.Photo.Setting.Admin_1_set[23154]: ExceptionTag::kDB exception [&#x2F;source&#x2F;synophoto&#x2F;src&#x2F;lib&#x2F;db&#x2F;model&#x2F;create_ability.hpp:49 insert error: Cannot execute query. ERROR:  circular inheritance not allowed</span><br><span class="line">DETAIL:  &quot;unit&quot; is already a child of &quot;unit&quot;.</span><br><span class="line">CONTEXT:  SQL statement &quot;ALTER TABLE unit INHERIT public.unit&quot;</span><br><span class="line">PL&#x2F;pgSQL function create_user_schema_func() line 40 at EXECUTE statement</span><br><span class="line">SQL statement &quot;INSERT INTO user_info (name, config, enable) VALUES (&#39;&#x2F;volume3&#x2F;photo&#39;, &#39;&#123;&quot;version&quot;: 57&#125;&#39;, true) RETURNING id&quot;</span><br><span class="line">PL&#x2F;pgSQL function create_delete_team_user_trigger_func() line 9 at EXECUTE statement</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>应该是数据库还有问题。直接把moments和drive全部卸载重装（勾选删除数据库）后恢复。</p>
+]]></content>
+      <categories>
+        <category>nas</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>nas</tag>
+      </tags>
+  </entry>
 </search>
