@@ -286,4 +286,24 @@
         <tag>nas</tag>
       </tags>
   </entry>
+  <entry>
+    <title>群晖部署七日杀server</title>
+    <url>/2023/11/08/%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2%E4%B8%83%E6%97%A5%E6%9D%80server/</url>
+    <content><![CDATA[<ul>
+<li>创建相关目录</li>
+</ul>
+<p><img src="/images/pasted-10.png" alt="upload successful"></p>
+<ul>
+<li><p>创建docker（我这边直接使用macvlan进行ip分配，如果映射到公网，需要将26900-26903均映射出去）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">docker run -d   --name 7dtdserver   --restart unless-stopped   --network macvlan_lede   --ip&#x3D;10.10.10.244   -v &quot;&#x2F;volume1&#x2F;docker&#x2F;7days&#x2F;7DaysToDie:&#x2F;home&#x2F;sdtdserver&#x2F;.local&#x2F;share&#x2F;7DaysToDie&#x2F;&quot;   -v &quot;&#x2F;volume1&#x2F;docker&#x2F;7days&#x2F;ServerFiles:&#x2F;home&#x2F;sdtdserver&#x2F;serverfiles&#x2F;&quot;   -v &quot;&#x2F;volume1&#x2F;docker&#x2F;7days&#x2F;Logs:&#x2F;home&#x2F;sdtdserver&#x2F;log&#x2F;&quot;   -v &quot;&#x2F;volume1&#x2F;docker&#x2F;7days&#x2F;BackupFolder:&#x2F;home&#x2F;sdtdserver&#x2F;lgsm&#x2F;backup&#x2F;&quot;   -v &quot;&#x2F;volume1&#x2F;docker&#x2F;7days&#x2F;LGSM-Config:&#x2F;home&#x2F;sdtdserver&#x2F;lgsm&#x2F;config-lgsm&#x2F;sdtdserver&#x2F;&quot;   -e START_MODE&#x3D;1   -e VERSION&#x3D;stable   -e TEST_ALERT&#x3D;NO   -e UPDATE_MODS&#x3D;NO   -e ALLOC_FIXES&#x3D;NO   -e ALLOC_FIXES_UPDATE&#x3D;NO   -e UNDEAD_LEGACY&#x3D;NO   -e UNDEAD_LEGACY_VERSION&#x3D;stable   -e DARKNESS_FALLS&#x3D;NO   -e DARKNESS_FALLS_UPDATE&#x3D;NO   -e DARKNESS_FALLS_URL&#x3D;False   -e UNDEAD_LEGACY_UPDATE&#x3D;NO   -e ENZOMBIES&#x3D;NO   -e ENZOMBIES_ADDON_SNUFKIN&#x3D;NO   -e ENZOMBIES_ADDON_ROBELOTO&#x3D;NO   -e ENZOMBIES_ADDON_NONUDES&#x3D;NO   -e ENZOMBIES_UPDATE&#x3D;NO   -e CPM&#x3D;NO   -e CPM_UPDATE&#x3D;NO   -e BEPINEX&#x3D;NO   -e BEPINEX_UPDATE&#x3D;NO   -e BACKUP&#x3D;NO   -e MONITOR&#x3D;NO   -e PUID&#x3D;1000   -e PGID&#x3D;1000   -e TimeZone&#x3D;Asia&#x2F;Shanghai   vinanrra&#x2F;7dtd-server</span><br></pre></td></tr></table></figure></li>
+<li><p>相关命令</p>
+<ul>
+<li><code>docker exec -it --user sdtdserver 7dtdserver ./sdtdserver details</code></li>
+<li><code>docker exec -it --user sdtdserver 7dtdserver ./sdtdserver restart</code></li>
+<li><code>docker exec -it --user sdtdserver 7dtdserver ./sdtdserver backup</code></li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
 </search>
